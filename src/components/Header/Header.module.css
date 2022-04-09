@@ -1,0 +1,91 @@
+.root {
+  height: 80px;
+}
+
+.header {
+  height: 80px;
+  width: 100%;
+  transition: height 0.2s linear, box-shadow 0.2s linear;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(245, 245, 245, 0.97);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  margin: 0 50px;
+  color: #444;
+  max-width: 1180px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.header.small {
+  line-height: 50px;
+  box-shadow: 0px 1px 3px 0px rgba(50, 50, 50, 0.8);
+}
+
+.header.small > .container > .logo {
+  height: 40px;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: red;
+  float: left;
+  height: 40px;
+  width: 170px;
+  margin-left: 5px;
+}
+
+.nav {
+  float: right;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  float: left;
+  position: relative;
+}
+
+.nav li a {
+  transition: color 0.2s linear;
+  font-size: 18px;
+}
+
+.nav li:hover a {
+  color: red;
+}
+
+.nav li a {
+  padding: 21px;
+  color: initial;
+  text-decoration: initial;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    margin: 0 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 0 14px;
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    margin: 0 8px;
+  }
+}

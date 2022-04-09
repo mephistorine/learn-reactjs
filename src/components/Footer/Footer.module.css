@@ -1,0 +1,68 @@
+.root {
+  width: 100%;
+  height: 80px;
+  background-color: #233140;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  margin: 0 50px;
+  color: #444;
+  max-width: 1180px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.footerWrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+.heart {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.heart:after {
+  content: "❤️";
+  display: inline-block;
+  font-size: 24px;
+  color: red;
+  animation: spin 2s infinite linear
+}
+
+@media (max-width: 1024px) {
+  .container {
+    margin: 0 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 0 14px;
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    margin: 0 8px;
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg)
+  }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg)
+  }
+}
