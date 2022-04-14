@@ -16,15 +16,6 @@
   align-items: center;
 }
 
-.container {
-  position: relative;
-  margin: 0 50px;
-  color: #444;
-  max-width: 1180px;
-  width: 100%;
-  overflow: hidden;
-}
-
 .header.small {
   line-height: 50px;
   box-shadow: 0px 1px 3px 0px rgba(50, 50, 50, 0.8);
@@ -70,22 +61,4 @@
   padding: 21px;
   color: initial;
   text-decoration: initial;
-}
-
-@media (max-width: 1024px) {
-  .container {
-    margin: 0 25px;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    margin: 0 14px;
-  }
-}
-
-@media (max-width: 560px) {
-  .container {
-    margin: 0 8px;
-  }
 }
