@@ -1,0 +1,17 @@
+.disabled {
+  user-select: none;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.container {
+  background: #f7f7f7;
+}
