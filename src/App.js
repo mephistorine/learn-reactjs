@@ -10,8 +10,7 @@ function App() {
     <>
       <Header />
       <Slider />
-      <Heading level={1}>Hello</Heading>
-      <Text element="div" disabled>Sam</Text>
+      <Text disabled>Sam</Text>
       <Footer />
     </>
   );

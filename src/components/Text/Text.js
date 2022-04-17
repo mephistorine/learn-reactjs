@@ -5,11 +5,15 @@ import classes from "./Text.module.css"
 import Container from "../Container"
 
 Text.propTypes = {
-  element: PropTypes.oneOf([ 'div', 'p', 'span' ]).isRequired,
+  element: PropTypes.oneOf([ 'div', 'p', 'span' ]),
   className: PropTypes.string,
   strong: PropTypes.bool,
   italic: PropTypes.bool,
   disabled: PropTypes.bool
+}
+
+Text.defaultProps = {
+  element: 'p'
 }
 
 function Text({ element, children, className, disabled, italic, strong }) {

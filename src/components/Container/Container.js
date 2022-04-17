@@ -1,6 +1,12 @@
 import React from "react"
 import classes from "./Container.module.css"
 import cn from "classnames"
+import PropTypes from "prop-types"
+
+Container.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node
+}
 
 function Container({ className, children }) {
   return (

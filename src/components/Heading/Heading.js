@@ -2,20 +2,33 @@ import React from "react"
 import PropTypes from "prop-types"
 import classes from "./Heading.module.css"
 import cn from "classnames"
-import Container from "../Container"
 
 Heading.propTypes = {
-  level: PropTypes.oneOf([ 1, 2, 3, 4, 5 ]).isRequired
+  level: PropTypes.oneOf([ 1, 2, 3, 4, 5 ]),
+  children: PropTypes.node,
+  className: PropTypes.string,
+  black: PropTypes.bool
 }
 
-function Heading({ level, children }) {
+Heading.defaultProps = {
+  leve: 1,
+  black: false
+}
+
+function Heading({ level, black, children }) {
   return (
     React.createElement(
       `h${ level }`,
-      { className: cn(classes[ `headingLevel${ level }` ], "root") },
-      <Container className={ classes.container }>
-        { children }
-      </Container>
+      {
+        className: cn(
+          classes[ `headingLevel${ level }` ],
+          classes.root,
+          {
+            [ classes.isBlack ]: black
+          }
+        )
+      },
+      children
     )
   )
 }
