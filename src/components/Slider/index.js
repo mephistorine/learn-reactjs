@@ -1,16 +1,23 @@
 import classes from "./Slider.module.css"
+import Container from "../Container"
+import Heading from "../Heading"
 
 export default function Slider() {
   return (
     <section className={ classes.section }>
       <div className={ classes.slider }>
-        <div className={ classes.container + ' ' + classes.sliderContent }>
-          <h1 className={ classes.header }>Wow</h1>
-          <h2 className={ classes.subheader }>Wow.Wow.Wow</h2>
+        <Container className={ classes.sliderContent }>
+          <Heading level={1} className={ classes.header }>Wow</Heading>
+          <Heading level={1}>
+            Wow
+          </Heading>
+          <Heading level={2}>
+            Wow.Wow.Wow
+          </Heading>
           <div className={ classes.call }>
             <button className={ classes.button }>Wow</button>
           </div>
-        </div>
+        </Container>
       </div>
     </section>
   )
