@@ -27,9 +27,7 @@ function Text({ element, children, className, disabled, italic, strong }) {
           [ classes.strong ]: strong
         })
       },
-      <Container className={ classes.container }>
-        {children}
-      </Container>
+      children
     )
   )
 }

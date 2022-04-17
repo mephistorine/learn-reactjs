@@ -11,7 +11,7 @@ Heading.propTypes = {
 }
 
 Heading.defaultProps = {
-  leve: 1,
+  level: 1,
   black: false
 }
 
