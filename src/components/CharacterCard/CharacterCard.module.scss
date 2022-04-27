@@ -1,0 +1,110 @@
+.root {
+  width: 350px;
+  background: #111;
+  height: 470px;
+  position: relative;
+  box-shadow: 0 1px 2px rgba(0,0,0,.4);
+  transition: all .2s ease;
+  overflow: hidden;
+  
+  &:hover {
+    .cardImage {
+      transform: scale(1.5);
+      opacity: .6;
+    }
+    
+    .cardDetails {
+      top: 30%;
+    }
+    
+    .cardDescription {
+      opacity: 1;
+    }
+  }
+}
+
+.cardImage {
+  max-width: 100%;
+  transform: scale(1);
+  transform-origin: 0 0;
+  margin-bottom: 0;
+  transition: all .2s ease;
+}
+
+.cardDetails {
+  background: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 60%;
+  padding: 20px;
+  transition: all .2s ease;
+}
+
+.cardName {
+  margin: 0;
+}
+
+.cardHumanName {
+  color: #e74c3c;
+}
+
+.cardDescription {
+  color: #666;
+  opacity: 0;
+  transition: all .4s ease;
+}
+
+.cardMeta {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  color: #999;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.like {
+  cursor: pointer;
+  
+  svg {
+    width: 20px;
+    height: 20px;
+    
+    path[id="bg"] {
+      fill: rgba(0,0,0,0);
+    }
+  }
+  
+  &:hover {
+    svg {
+      opacity: .4;
+      
+      path[id="bg"] {
+        fill: #FF1D25;
+      }
+    }
+  }
+  
+  &.liked {
+    svg {
+      width: 20px;
+      height: 20px;
+      
+      path[id="bg"] {
+        fill: #FF1D25;
+      }
+    }
+    
+    &:hover {
+      svg {
+        opacity: 1;
+      }
+    }
+  }
+}
