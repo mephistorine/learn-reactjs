@@ -1,6 +1,7 @@
 import classes from "./Slider.module.scss"
 import Container from "../Container"
 import Heading from "../Heading"
+import Button from "../Button"
 
 export default function Slider() {
   return (
@@ -12,7 +13,7 @@ export default function Slider() {
             Wow.Wow.Wow
           </Heading>
           <div className={ classes.call }>
-            <button className={ classes.button }>Wow</button>
+            <Button appearance={"dark"}>Wow</Button>
           </div>
         </Container>
       </div>
