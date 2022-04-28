@@ -8,6 +8,7 @@ import Container from "./components/Container"
 import classes from "./App.module.scss"
 import CharacterCard from "./components/CharacterCard"
 import { useState } from "react"
+import Biography from "./pages/Biography"
 
 const CHARACTER = [
   {
@@ -74,6 +75,7 @@ const CHARACTER = [
 
 function App() {
   const [ characters, setCharacters ] = useState(CHARACTER)
+  const [ currentOpenedCharacterId, setCurrentOpenedCharacterId ] = useState(null)
   
   const handleLikeClick = (id) => {
     setCharacters((prevCharacters) => {
@@ -88,6 +90,19 @@ function App() {
         }
       })
     })
+  }
+  
+  const handleReadBioClick = (id) => setCurrentOpenedCharacterId(id)
+  const handleGoBackClick = () => setCurrentOpenedCharacterId(null)
+  
+  if (typeof currentOpenedCharacterId === "number") {
+    return (
+      <>
+        <Header />
+        <Biography characterId={currentOpenedCharacterId} onGoBackClick={handleGoBackClick}></Biography>
+        <Footer />
+      </>
+    )
   }
   
   return (
@@ -114,7 +129,8 @@ function App() {
                   humanName={character.humanName}
                   description={character.description}
                   isLiked={character.isLike}
-                  onLikeClick={(id) => handleLikeClick(id)}
+                  onLikeClick={handleLikeClick}
+                  onReadBioClick={handleReadBioClick}
                 />
               </div>
             )
@@ -123,7 +139,7 @@ function App() {
       </div>
       <Footer />
     </>
-  );
+  )
 }
 
 export default App;

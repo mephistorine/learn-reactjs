@@ -4,15 +4,17 @@ import cn from "classnames"
 
 Button.propTypes = {
   children: PropTypes.node,
-  appearance: PropTypes.oneOf([ "light", "dark" ])
+  appearance: PropTypes.oneOf([ "light", "dark" ]),
+  onClick: PropTypes.func,
+  className: PropTypes.string
 }
 
 Button.defaultProps = {
   appearance: "light"
 }
 
-export default function Button({ children, appearance }) {
+export default function Button({ children, appearance, onClick, className }) {
   return (
-    <button className={cn(style.root, style[ appearance ])}>{ children }</button>
+    <button className={cn(className, style.root, style[ appearance ])} onClick={onClick}>{ children }</button>
   )
 }

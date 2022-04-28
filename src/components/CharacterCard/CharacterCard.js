@@ -10,14 +10,15 @@ CharacterCard.propTypes = {
   humanName: PropTypes.string,
   description: PropTypes.string,
   onLikeClick: PropTypes.func,
-  isLiked: PropTypes.bool
+  isLiked: PropTypes.bool,
+  onReadBioClick: PropTypes.func
 }
 
 CharacterCard.defaultProps = {
   isLiked: false
 }
 
-export default function CharacterCard({ id, name, src, humanName, description, isLiked, onLikeClick }) {
+export default function CharacterCard({ id, name, src, humanName, description, isLiked, onLikeClick, onReadBioClick }) {
   return (
     <div className={ classes.root }>
       <img src={src} alt={name} className={ classes.cardImage } />
@@ -30,7 +31,7 @@ export default function CharacterCard({ id, name, src, humanName, description, i
             <Like onClick={() => onLikeClick(id)} />
           </div>
           <div className="readBio">
-            <a href="#">Read bio</a>
+            <a href="#" onClick={() => onReadBioClick(id)}>Read bio</a>
           </div>
         </div>
       </div>
