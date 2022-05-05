@@ -1,26 +1,24 @@
-import './App.css';
-import Header from "./components/Header"
-import Slider from "./components/Slider"
-import Footer from "./components/Footer"
-import Heading from "./components/Heading"
-import Text from "./components/Text/Text"
-import Container from "./components/Container"
+import "./App.module.scss"
+import { Route, Routes } from "react-router-dom"
+import Main from "./pages/Main"
+import Biography from "./pages/Biography"
+import Layout from "./components/Layout/Layout"
+import Contacts from "./pages/Contacts"
+import About from "./pages/About/About"
+import Characters from "./pages/Characters/Characters"
 
 function App() {
   return (
-    <>
-      <Header />
-      <Slider />
-      <div className="some-container">
-        <Container>
-          <Heading>Marvel Cards</Heading>
-          <Heading level={2}>Collect your best five</Heading>
-          <Text disabled>Sam</Text>
-        </Container>
-      </div>
-      <Footer />
-    </>
-  );
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Main />} />
+        <Route path="contacts" element={<Contacts />} />
+        <Route path="about" element={<About />} />
+        <Route path="characters" element={ <Characters /> } />
+        <Route path="characters/:id" element={ <Biography /> } />
+      </Route>
+    </Routes>
+  )
 }
 
 export default App;

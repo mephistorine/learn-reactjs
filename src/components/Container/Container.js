@@ -1,5 +1,5 @@
 import React from "react"
-import classes from "./Container.module.css"
+import classes from "./Container.module.scss"
 import cn from "classnames"
 import PropTypes from "prop-types"
 

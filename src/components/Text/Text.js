@@ -21,7 +21,7 @@ function Text({ element, children, className, disabled, italic, strong }) {
     React.createElement(
       element,
       {
-        className: cn(className, 'root', {
+        className: cn(className, {
           [ classes.disabled ]: disabled,
           [ classes.italic ]: italic,
           [ classes.strong ]: strong

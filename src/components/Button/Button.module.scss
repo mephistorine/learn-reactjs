@@ -1,0 +1,35 @@
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  background-color: transparent;
+  
+  border-width: 1px;
+  border-style: solid;
+  padding: 8px 13px;
+  font-size: 20px;
+  transition: background 0.15s linear;
+}
+
+.root:hover {
+  cursor: pointer;
+}
+
+.root.light {
+  color: #fff;
+  border-color: #fff;
+}
+
+.root.light:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.root.dark {
+  color: #000;
+  border-color: #000;
+}
+
+.root.dark:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
