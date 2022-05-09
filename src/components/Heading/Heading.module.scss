@@ -17,6 +17,12 @@
   }
 }
 
+.root.hasAnchorLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .headingLevel1 {
   margin-bottom: 0.5em;
   color: #000000d9;
@@ -63,4 +69,14 @@
 
 .isBlack {
   color: black;
+}
+
+.headingLink {
+  cursor: pointer;
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  background: url(http://localhost:3000/static/media/link_icon.ee8806c2f979c6cdd365.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
 }
