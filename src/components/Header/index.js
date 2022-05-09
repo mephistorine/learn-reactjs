@@ -4,7 +4,7 @@ import Container from "../Container"
 import logoPng from "../../assets/logo.png"
 import cn from "classnames"
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 
 const MENU = [
   {
@@ -46,7 +46,13 @@ export default function Header() {
             <Link to="/"><img src={ logoPng } alt="Logo" /></Link>
           </div>
           <ul className={ classes.nav }>
-            { MENU.map((item) => <li><Link to={ item.to }>{ item.label }</Link></li>) }
+            {
+              MENU.map((item, index) =>
+                <li key={ index }>
+                  <NavLink to={ item.to }
+                           className={({ isActive }) => isActive ? classes.active : ''}>{ item.label }</NavLink>
+                </li>)
+            }
           </ul>
         </Container>
       </div>
